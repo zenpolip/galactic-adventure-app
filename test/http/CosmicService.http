@@ -6,6 +6,13 @@
 # @name Spacefarers_GET
 GET {{server}}/odata/v4/cosmic/Spacefarers?$count=true
 
+@spacefarers_ID = {{ Spacefarers_GET.response.body.value[0].ID }}
+
+### Spacefarers
+# @name Spacefarers_GET_BY_ID
+GET {{server}}/odata/v4/cosmic/Spacefarers({{spacefarers_ID}})
+
+
 ### Spacefarers
 # @name Spacefarers_POST
 POST {{server}}/odata/v4/cosmic/Spacefarers
