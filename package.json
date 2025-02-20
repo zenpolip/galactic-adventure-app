@@ -19,7 +19,20 @@
 	"cds": {
 		"requires": {
 			"auth": {
-				"kind": "mocked"
+				"kind": "mocked",
+				"users": {
+					"alice": {
+						"roles": [
+							"SpacefarerViewer",
+							"SpacefarerAdmin"
+						]
+					},
+					"bob": {
+						"roles": [
+							"SpacefarerViewer"
+						]
+					}
+				}
 			}
 		}
 	}
