@@ -5,12 +5,19 @@ using {
 
 namespace galacticAdventure;
 
+type SkillLevel : String enum {
+  Beginner;
+  Intermediate;
+  Advanced;
+  Expert;
+}
+
 entity Spacefarers : cuid, managed {
   name               : String;
   originPlanet       : String;
   spacesuitColor     : String;
   stardustCollection : Integer;
-  wormholeNavSkill   : Integer;
+  wormholeNavSkill   : SkillLevel;
   department         : Association to Departments;
   position           : Association to Positions;
 }

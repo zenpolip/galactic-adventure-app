@@ -29,7 +29,7 @@ Content-Type: application/json
   "originPlanet": "Planet-22408748",
   "spacesuitColor": "black",
   "stardustCollection": 18,
-  "wormholeNavSkill": 81,
+  "wormholeNavSkill": "Beginner",
   "department_ID": "c716c584-6f5e-4f08-ae1a-2109d58d2ca3",
   "position_ID": "34e28c85-7426-4fff-a71b-e18dc39a986e"
 }
@@ -47,7 +47,7 @@ Content-Type: application/json
   "originPlanet": "Planet-22408748",
   "spacesuitColor": "white",
   "stardustCollection": 18,
-  "wormholeNavSkill": 81,
+  "wormholeNavSkill": "Beginner",
   "department_ID": "c716c584-6f5e-4f08-ae1a-2109d58d2ca3",
   "position_ID": "34e28c85-7426-4fff-a71b-e18dc39a986e"
 }

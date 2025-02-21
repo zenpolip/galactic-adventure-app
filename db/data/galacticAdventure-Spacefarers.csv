@@ -1,5 +1,5 @@
 ID,name,originPlanet,spacesuitColor,stardustCollection,wormholeNavSkill,department_ID,position_ID
-96b54905-32f9-4822-86d4-2700d0f38869,"Alice","Earth","blue",100,3, c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 34e28c85-7426-4fff-a71b-e18dc39a986e
-fb2c61bc-99af-4b3f-8c1a-d0ec6acafc0e,"Bob","Mars","red",200,2, aeab5f9b-a233-4647-be4a-624d221429c4, 645f158a-df5a-4bd7-a868-b6a108fb5e05
-1e1624a1-17c5-491e-b478-f1475caec7f6,"Charlie","Jupiter","green",300,1, c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 34e28c85-7426-4fff-a71b-e18dc39a986e
-b89febec-983b-4497-b044-695d96c6b9a0,"Diana","Saturn","yellow",400,0, c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 645f158a-df5a-4bd7-a868-b6a108fb5e05
+96b54905-32f9-4822-86d4-2700d0f38869,"Alice","Earth","blue",100,"Beginner", c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 34e28c85-7426-4fff-a71b-e18dc39a986e
+fb2c61bc-99af-4b3f-8c1a-d0ec6acafc0e,"Bob","Mars","red",200,"Beginner", aeab5f9b-a233-4647-be4a-624d221429c4, 645f158a-df5a-4bd7-a868-b6a108fb5e05
+1e1624a1-17c5-491e-b478-f1475caec7f6,"Charlie","Jupiter","green",300,"Beginner", c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 34e28c85-7426-4fff-a71b-e18dc39a986e
+b89febec-983b-4497-b044-695d96c6b9a0,"Diana","Saturn","yellow",400,"Intermediate", c716c584-6f5e-4f08-ae1a-2109d58d2ca3, 645f158a-df5a-4bd7-a868-b6a108fb5e05
