@@ -16,7 +16,10 @@ entity Spacefarers : cuid, managed {
   name               : String;
   originPlanet       : String;
   spacesuitColor     : String;
-  stardustCollection : Integer;
+  stardustCollection : Integer @assert.range: [
+    (0),
+    _
+  ];
   wormholeNavSkill   : SkillLevel;
   department         : Association to Departments;
   position           : Association to Positions;
