@@ -14,9 +14,10 @@ type SkillLevel : String enum {
 
 entity Spacefarers : cuid, managed {
   name               : String;
+  email              : String  @assert.format: email;
   originPlanet       : String;
   spacesuitColor     : String;
-  stardustCollection : Integer @assert.range: [
+  stardustCollection : Integer @assert.range : [
     (0),
     _
   ];

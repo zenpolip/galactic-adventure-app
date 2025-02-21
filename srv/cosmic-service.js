@@ -1,4 +1,5 @@
 import cds from "@sap/cds";
+import { sendEmail } from "./email-service.js";
 
 export default class CosmicService extends cds.ApplicationService {
 	async init() {
@@ -12,16 +13,20 @@ export default class CosmicService extends cds.ApplicationService {
 		};
 
 		this.before("CREATE", Spacefarers, async (req) => {
-			const { name, originPlanet, department_ID } = req.data;
+			const { name, originPlanet, department_ID, email } = req.data;
 
-			if (!name || !originPlanet || !department_ID) {
+			if (!name || !originPlanet || !department_ID || !email) {
 				return req.error(
 					400,
-					"name, originPlanet, and department_ID are required."
+					"name, originPlanet, department_ID and email are required."
 				);
 			}
 
 			Object.assign(req.data, initialValues);
+		});
+
+		this.after("CREATE", Spacefarers, async (data) => {
+			await sendEmail(data.email);
 		});
 
 		await super.init();
