@@ -19,5 +19,11 @@ service CosmicService @(requires: 'authenticated-user') {
       to   : 'SpacefarerAdmin'
     }
   ]
-  entity Spacefarers as projection on galacticAdventure.Spacefarers
+  entity Spacefarers         as projection on galacticAdventure.Spacefarers;
+
+  @(restrict: [{
+    grant: ['READ'],
+    to   : 'authenticated-user'
+  }])
+  entity SpacefarerPositions as projection on galacticAdventure.Positions;
 }
