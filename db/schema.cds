@@ -1,8 +1,11 @@
-using {cuid} from '@sap/cds/common';
+using {
+  cuid,
+  managed
+} from '@sap/cds/common';
 
 namespace galacticAdventure;
 
-entity Spacefarers : cuid {
+entity Spacefarers : cuid, managed {
   name               : String;
   originPlanet       : String;
   spacesuitColor     : String;
