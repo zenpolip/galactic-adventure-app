@@ -17,7 +17,8 @@
 	},
 	"scripts": {
 		"start": "cds serve all --port 4004 --watch --with-mocks --in-memory?",
-		"watch-fiori_list_page": "cds watch --open fiori_list_page/webapp/index.html?sap-ui-xx-viewCache=false"
+		"watch-fiori_list_page": "cds watch --open fiori_list_page/webapp/index.html?sap-ui-xx-viewCache=false",
+		"watch-fioriapp": "cds watch --open fioriapp/webapp/index.html?sap-ui-xx-viewCache=false"
 	},
 	"cds": {
 		"requires": {
@@ -46,7 +47,14 @@
 				"credentials": {
 					"database": "db/galactic-adventure.sqlite"
 				}
+			},
+			"cosmicService": {
+				"kind": "odata-v4",
+				"model": "srv/cosmic-service"
 			}
 		}
-	}
+	},
+	"sapux": [
+		"app/fioriapp"
+	]
 }
