@@ -1,23 +1,98 @@
-# Getting Started
+# 🚀 Galactic Adventure App (SAP CAP + Fiori)
 
-Welcome to your new project.
+The **Galactic Adventure App** is a **SAP CAP (Cloud Application Programming) project** that allows **spacefarers** to register, manage their profiles, and receive onboarding emails.
+The backend is built with **SAP CAP (Node.js)**, and the frontend is a **Fiori Elements** application.
 
-It contains these folders and files, following our recommended project layout:
+## 📌 Features
 
-| File or Folder | Purpose                              |
-| -------------- | ------------------------------------ |
-| `app/`         | content for UI frontends goes here   |
-| `db/`          | your domain models and data go here  |
-| `srv/`         | your service models and code go here |
-| `package.json` | project metadata and configuration   |
-| `readme.md`    | this getting started guide           |
+- **SAP CAP Backend** (OData v4)
+- **Fiori Elements UI**
+- **Email Notifications** (via Nodemailer)
+- **SQLite Database for Local Development**
+- **Authentication with Mocked Users**
+- **Role-based Access Control** (Admin & Viewer)
 
-## Next Steps
+## 🛠️ Setup & Installation
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+### 1️⃣ **Prerequisites**
 
-## Learn More
+Make sure you have:
 
-Learn more at https://cap.cloud.sap/docs/get-started/.
+- **Node.js**
+- **SAP CAP CDS CLI** (`npm install -g @sap/cds-dk`)
+- **SQLite** (for local development)
+
+### 2️⃣ **Install Dependencies**
+
+```sh
+npm install
+```
+
+### 3️⃣ Start the CAP Backend
+
+```sh
+npm start
+```
+
+This will:
+
+Start the OData v4 service at:
+http://localhost:4004
+
+Automatically watch for changes in CAP files
+
+### 4️⃣ Run the Fiori App
+
+In a new terminal:
+
+cd ./app/fioriapp/
+
+```
+npm fiori-start
+```
+
+Your Fiori UI should be available at:
+http://localhost:8080/index.html
+
+## 📡 API Endpoints (OData v4)
+
+The backend exposes OData v4 services via cosmicService:
+
+🔹 GET Spacefarers
+
+```
+GET http://localhost:4004/odata/v4/cosmic/Spacefarers
+```
+
+🔹 POST Create a Spacefarer
+
+```
+POST http://localhost:4004/odata/v4/cosmic/Spacefarers
+Content-Type: application/json
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "originPlanet": "Mars",
+  "department_ID": "12345"
+}
+```
+
+📌 Triggers a welcome email! 🎉
+
+## 📩 Email Notifications
+
+The email service sends a welcome email when a new Spacefarer is created.
+
+📌 Configuration:
+
+- Email settings are in /srv/email-config.js
+- Uses Mailtrap SMTP (for testing)
+
+## 🔐 Authentication & Roles
+
+The CAP service supports mocked authentication:
+
+- admin → SpacefarerAdmin
+- alice & bob → SpacefarerViewer
+
+📌 Modify package.json (cds.requires.auth) to change roles.
