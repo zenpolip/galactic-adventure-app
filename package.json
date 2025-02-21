@@ -33,6 +33,12 @@
 						]
 					}
 				}
+			},
+			"db": {
+				"kind": "sqlite",
+				"credentials": {
+					"database": "db/galactic-adventure.sqlite"
+				}
 			}
 		}
 	}
