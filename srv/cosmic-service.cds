@@ -4,10 +4,7 @@ service CosmicService @(requires: 'authenticated-user') {
   @restrict: [
     {
       grant: ['READ'],
-      to   : [
-        'SpacefarerViewer',
-        'SpacefarerAdmin'
-      ]
+      to   : ['SpacefarerViewer', ]
     },
     {
       grant: [
@@ -26,4 +23,10 @@ service CosmicService @(requires: 'authenticated-user') {
     to   : 'authenticated-user'
   }])
   entity SpacefarerPositions as projection on galacticAdventure.Positions;
+
+  @(restrict: [{
+    grant: ['READ'],
+    to   : 'authenticated-user'
+  }])
+  entity SpafarerDepartments as projection on galacticAdventure.Departments
 }

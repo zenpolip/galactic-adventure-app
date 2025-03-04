@@ -1,0 +1,57 @@
+{
+	"services": {
+		"LaunchPage": {
+			"adapter": {
+				"config": {
+					"catalogs": [],
+					"groups": [
+						{
+							"id": "Administration",
+							"title": "Administration",
+							"isPreset": true,
+							"isVisible": true,
+							"isGroupLocked": false,
+							"tiles": [
+								{
+									"id": "ManageSpacefarers",
+									"tileType": "sap.ushell.ui.tile.StaticTile",
+									"properties": {
+										"title": "Manage Spacefarers",
+										"targetURL": "#Spacefarers-manage"
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"NavTargetResolution": {
+			"config": {
+				"enableClientSideTargetResolution": true
+			}
+		},
+		"ClientSideTargetResolution": {
+			"adapter": {
+				"config": {
+					"inbounds": {
+						"ManageSpacefarers": {
+							"semanticObject": "Spacefarers",
+							"action": "manage",
+							"title": "Manage Spacefarers",
+							"signature": {
+								"parameters": {},
+								"additionalParameters": "allowed"
+							},
+							"resolutionResult": {
+								"applicationType": "SAPUI5",
+								"additionalInformation": "SAPUI5.Component=spacefarerlist.fioriapp",
+								"url": "/fioriapp/webapp"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
